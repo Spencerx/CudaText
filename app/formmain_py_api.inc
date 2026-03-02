@@ -8644,7 +8644,6 @@ begin
                   NSize:= Form.Height+2{borders};
               end;
 
-              //Ed.Gaps.DeleteForLineRange(Num1, Num1);
               if Ed.Gaps.Add(Num1, NSize, Bmp, Form, NTag, NColor) then
               begin
                 ////better to set OptLastLineOnTop always, to fix [v-scrollbar cannot reach end for many gaps at end]
