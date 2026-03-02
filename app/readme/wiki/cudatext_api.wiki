@@ -3353,6 +3353,9 @@ If an item begins with "&lt;html&gt;", [[#HTML formatting]] is allowed in this i
  gap(id, num1, num2, tag=-1, size=0, color=COLOR_NONE)
 
 Performs action on inter-line gaps (they don't overlap text above/below).
+Several gaps per single line are supported.
+Gap before the first line is supported.
+
 Possible values of "id":
 
 * GAP_GET_ALL: Returns list of gaps, as list of dict. Dict keys are:
