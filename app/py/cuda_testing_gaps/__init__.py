@@ -2,14 +2,21 @@ from cudatext import *
 
 class Command:
     def add_many(self):
+        self.del_all()
+        s = dlg_input('How many gaps per line:', '2')
+        if s is None:
+            return
+        try:
+            nlimit = int(s)
+        except:
+            return
+        if nlimit<1:
+            return
         ntag = 100
         for i in range(ed.get_line_count()//2):
-            ntag += 1
-            self.do_gap(i*2, ntag)
-            ntag += 1
-            self.do_gap(i*2, ntag)
-            ntag += 1
-            self.do_gap(i*2, ntag)
+            for j in range(nlimit):
+                ntag += 1
+                self.do_gap(i*2, ntag)
 
     def do_gap(self, nline, ntag):
         id_bitmap, id_canvas = ed.gap(GAP_MAKE_BITMAP, 600, 50)

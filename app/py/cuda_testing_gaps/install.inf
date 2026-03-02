@@ -7,7 +7,7 @@ homepage=
 
 [item1]
 section=commands
-caption=Testing of gaps API\Add gaps
+caption=Testing of gaps API\Add gaps...
 method=add_many
 
 [item2]
